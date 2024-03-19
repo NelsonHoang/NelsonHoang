@@ -1,5 +1,6 @@
 import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import kotlinx.html.link
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -14,7 +15,14 @@ version = "1.0-SNAPSHOT"
 kobweb {
     app {
         index {
-            description.set("Powered by Kobweb")
+            description.set("Software Engineer")
+
+            head.add {
+                link {
+                    rel = "stylesheet"
+                    href = "https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900"
+                }
+            }
         }
 
         // Only legacy sites need this set. Sites built after 0.16.0 should default to DISALLOW.
