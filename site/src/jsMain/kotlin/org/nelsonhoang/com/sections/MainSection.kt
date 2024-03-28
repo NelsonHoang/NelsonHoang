@@ -22,6 +22,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import org.nelsonhoang.com.components.Header
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.style.MainImageStyle
@@ -56,7 +57,7 @@ fun MainBackground() {
 @Composable
 fun MainContent() {
     val breakpoint = rememberBreakpoint()
-
+    Header()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
