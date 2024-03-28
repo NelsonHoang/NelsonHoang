@@ -98,7 +98,7 @@ fun MainText(breakpoint: Breakpoint) {
         P(
             attrs = Modifier
                 .margin(topBottom = 0.px)
-                .fontFamily(Theme.Primary.hex)
+                .fontFamily(FONT_FAMILY)
                 .fontSize(if (breakpoint >= Breakpoint.LG) 45.px else 20.px)
                 .fontWeight(FontWeight.Normal)
                 .color(Theme.Primary.rgb)
