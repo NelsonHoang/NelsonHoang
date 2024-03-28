@@ -17,6 +17,7 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
@@ -97,13 +98,13 @@ fun MainText(breakpoint: Breakpoint) {
         P(
             attrs = Modifier
                 .margin(topBottom = 0.px)
-                .fontFamily(FONT_FAMILY)
+                .fontFamily(Theme.Primary.hex)
                 .fontSize(if (breakpoint >= Breakpoint.LG) 45.px else 20.px)
                 .fontWeight(FontWeight.Normal)
                 .color(Theme.Primary.rgb)
                 .toAttrs()
         ) {
-            Text("Hello World")
+            Text("Hello, I am")
         }
     }
 }
