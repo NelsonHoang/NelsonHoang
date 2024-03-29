@@ -18,6 +18,9 @@ import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
+/**
+ * Used to label each Section of the Home Page based on their title and subtitle
+ */
 @Composable
 fun SectionTitle(
     modifier: Modifier = Modifier,

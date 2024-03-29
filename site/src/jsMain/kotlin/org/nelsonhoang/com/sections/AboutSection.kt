@@ -29,6 +29,9 @@ import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.Res
 
+/**
+ * About me section of the Home Page
+ */
 @Composable
 fun AboutSection() {
     Box(

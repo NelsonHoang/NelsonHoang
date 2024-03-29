@@ -22,6 +22,9 @@ import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.style.NavigationItemStyle
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
+/**
+ * Header Component for the Home Page
+ */
 @Composable
 fun Header() {
     val breakpoint = rememberBreakpoint()
@@ -37,6 +40,9 @@ fun Header() {
         }
     }
 }
+/**
+ * The clickable labels for the header
+ */
 @Composable
 fun RightSide() {
     Row(
