@@ -17,7 +17,7 @@ const val HEADER_TEXT1 = "Hello, I am"
 const val HEADER_TEXT2 = "Nelson Hoang"
 const val HEADER_TEXT3 = "Android Developer with Backend Experience"
 const val BODY_TEXT =
-    "I've worked for Amazon Music, Skulpt.me and the company formerly known as Facebook"
+    "I am passionate about developing Mobile Apps and love building backend APIs whenever I get the chance \uD83D\uDE42"
 
 /**
  * Component for all the text shown in the [MainSection]
