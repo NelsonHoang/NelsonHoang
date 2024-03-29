@@ -86,7 +86,8 @@ fun MainImage() {
         verticalArrangement = Arrangement.Bottom
     ) {
         Image(
-            modifier = MainImageStyle.toModifier().fillMaxWidth(),
+            modifier = MainImageStyle.toModifier().fillMaxWidth()
+                .margin(left = 20.percent),
             src = Res.Img.SELF,
             description = "Self Image"
         )
