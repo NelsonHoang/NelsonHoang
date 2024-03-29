@@ -15,7 +15,7 @@ enum class Section(
     About(
         id = "about",
         title = "About Me",
-        subtitle = "About Me",
+        subtitle = "What do I like to do?",
         path = "#about"
     ),
     Experience(

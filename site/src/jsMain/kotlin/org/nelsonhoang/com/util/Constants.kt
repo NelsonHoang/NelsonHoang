@@ -7,6 +7,7 @@ object Constants {
 
 object Res {
     object Img {
+        const val ABOUT = "about_image.jpg"
         const val BACKGROUND = "background.svg"
         const val SELF = "self.png"
     }
