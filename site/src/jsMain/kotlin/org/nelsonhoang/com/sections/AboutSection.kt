@@ -26,6 +26,7 @@ import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.style.AboutImageStyle
 import org.nelsonhoang.com.style.AboutTextStyle
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
+import org.nelsonhoang.com.util.Constants.SECTION_PADDING
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.Res
 
@@ -38,7 +39,7 @@ fun AboutSection() {
         modifier = Modifier
             .id(Section.About.id)
             .maxWidth(SECTION_WIDTH.px)
-            .padding(topBottom = 150.px),
+            .padding(topBottom = SECTION_PADDING.px),
         contentAlignment = Alignment.Center
     ) {
         AboutContent()
