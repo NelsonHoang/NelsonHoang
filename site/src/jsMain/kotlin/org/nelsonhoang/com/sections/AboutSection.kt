@@ -1,6 +1,6 @@
 package org.nelsonhoang.com.sections
 
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.FontStyle
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -16,19 +16,24 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import org.nelsonhoang.com.components.SectionTitle
+import org.nelsonhoang.com.components.SkillBar
 import org.nelsonhoang.com.model.Section
+import org.nelsonhoang.com.model.Skill
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.style.AboutImageStyle
 import org.nelsonhoang.com.style.AboutTextStyle
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 import org.nelsonhoang.com.util.Constants.SECTION_PADDING
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
+import org.nelsonhoang.com.util.ObserveViewPortEntered
 import org.nelsonhoang.com.util.Res
+import org.nelsonhoang.com.util.animateNumbers
 
 /**
  * About me section of the Home Page
@@ -91,6 +96,28 @@ fun AboutImage() {
 
 @Composable
 fun AboutMe() {
+    val scope = rememberCoroutineScope()
+    var viewportEntered by remember { mutableStateOf(false) }
+    val animatePercentage = remember { mutableStateListOf(0, 0, 0, 0, 0) }
+
+    ObserveViewPortEntered(
+        sectionId = Section.About.id,
+        distanceFromTop = 300.0,
+        onViewportEntered = {
+            viewportEntered = true
+            Skill.entries.forEach { skill ->
+                scope.launch {
+                    animateNumbers(
+                        number = skill.percentage.value.toInt(),
+                        onUpdate = {
+                            animatePercentage[skill.ordinal] = it
+                        }
+                    )
+                }
+            }
+        }
+    )
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center
@@ -108,6 +135,14 @@ fun AboutMe() {
                 .toAttrs()
         ) {
             Text("Hello")
+        }
+        Skill.entries.forEach { skill ->
+            SkillBar(
+                name = skill.title,
+                index = skill.ordinal,
+                percentage = if (viewportEntered) skill.percentage else 0.percent,
+                animatedPercentage = if (viewportEntered) animatePercentage[skill.ordinal] else 0
+            )
         }
     }
 }
