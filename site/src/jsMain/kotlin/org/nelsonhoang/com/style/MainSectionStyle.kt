@@ -55,3 +55,14 @@ val MainImageStyle by ComponentStyle {
             }
     }
 }
+
+val SocialLinkStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(Theme.Gray.rgb)
+            .transition(CSSTransition(property = "color", 200.ms))
+    }
+    hover {
+        Modifier.color(Theme.Primary.rgb)
+    }
+}

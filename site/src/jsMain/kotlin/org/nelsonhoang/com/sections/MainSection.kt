@@ -5,6 +5,7 @@ import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -18,6 +19,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.components.Header
 import org.nelsonhoang.com.components.MainText
+import org.nelsonhoang.com.components.SocialBar
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.style.MainImageStyle
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
@@ -50,22 +52,28 @@ fun MainBackground() {
 @Composable
 fun MainContent() {
     val breakpoint = rememberBreakpoint()
-    Header()
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom,
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        SimpleGrid(
-            modifier = Modifier
-                .fillMaxWidth(
-                    if (breakpoint >= Breakpoint.MD) 80.percent
-                    else 90.percent
-                ),
-            numColumns = numColumns(base = 1, md = 2)
+        Header()
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            MainText(breakpoint = breakpoint)
-            MainImage()
+            SimpleGrid(
+                modifier = Modifier
+                    .fillMaxWidth(
+                        if (breakpoint >= Breakpoint.MD) 80.percent
+                        else 90.percent
+                    ),
+                numColumns = numColumns(base = 1, md = 2)
+            ) {
+                MainTextAndMaybeSocialBar(breakpoint)
+                MainImage()
+            }
         }
     }
 }
@@ -84,5 +92,18 @@ fun MainImage() {
             src = Res.Img.SELF,
             description = "Self Image"
         )
+    }
+}
+
+@Composable
+fun MainTextAndMaybeSocialBar(breakpoint : Breakpoint) {
+    Row(
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (breakpoint > Breakpoint.MD) {
+            SocialBar()
+        }
+        MainText(breakpoint = breakpoint)
     }
 }
