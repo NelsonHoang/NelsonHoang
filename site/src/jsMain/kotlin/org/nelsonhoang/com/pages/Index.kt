@@ -10,6 +10,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
 import org.jetbrains.compose.web.dom.Text
 import org.nelsonhoang.com.sections.AboutSection
+import org.nelsonhoang.com.sections.ExperienceSection
 import org.nelsonhoang.com.sections.MainSection
 
 @Page
@@ -26,6 +27,7 @@ fun HomePage() {
         ) {
             MainSection()
             AboutSection()
+            ExperienceSection()
         }
     }
 }
