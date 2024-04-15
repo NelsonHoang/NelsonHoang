@@ -22,6 +22,9 @@ import org.nelsonhoang.com.model.Experience
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
+/**
+ * Component representing a card in the [ExperienceSection]
+ */
 @Composable
 fun ExperienceCard(
     breakpoint: Breakpoint,
@@ -51,6 +54,9 @@ fun ExperienceCard(
     }
 }
 
+/**
+ * Component representing the description of a card in the [ExperienceSection]
+ */
 @Composable
 fun ExperienceDescription(
     active: Boolean,
@@ -78,6 +84,10 @@ fun ExperienceDescription(
     }
 }
 
+/**
+ * Component representing the job description of a card in the
+ * [ExperienceSection]
+ */
 @Composable
 fun ExperienceDetails(
     breakpoint: Breakpoint,
@@ -144,6 +154,10 @@ fun ExperienceDetails(
     }
 }
 
+/**
+ * Component representing the job number in the middle of each card in the
+ * [ExperienceSection]
+ */
 @Composable
 fun ExperienceNumber(
     active: Boolean,
