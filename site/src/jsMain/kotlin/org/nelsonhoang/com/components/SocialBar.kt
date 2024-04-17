@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
+import com.varabyte.kobweb.silk.components.icons.fa.FaGithub
 import com.varabyte.kobweb.silk.components.icons.fa.FaInstagram
 import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
@@ -19,7 +20,7 @@ import org.nelsonhoang.com.style.SocialLinkStyle
 
 /**
  * @return A Component that contains social media links
- * */
+ */
 @Composable
 fun SocialBar(isRow: Boolean = false) {
     if (isRow) {
@@ -51,18 +52,26 @@ fun SocialBar(isRow: Boolean = false) {
     }
 }
 
+/**
+ * Return all the social link icons.
+ */
 @Composable
 private fun SocialLinks(isRow: Boolean = false) {
+    Link(
+        path = GITHUB_URL,
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+    ) {
+        FaGithub(
+            modifier = createLinkModifier(isRow),
+            size = IconSize.LG
+        )
+    }
     Link(
         path = LINKEDIN_URL,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaLinkedin(
-            modifier = SocialLinkStyle.toModifier()
-                .margin(
-                    bottom = if (isRow) 0.px else 40.px,
-                    right = if (isRow) 40.px else 0.px
-                ),
+            modifier = createLinkModifier(isRow),
             size = IconSize.LG
         )
     }
@@ -71,15 +80,24 @@ private fun SocialLinks(isRow: Boolean = false) {
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaInstagram(
-            modifier = SocialLinkStyle.toModifier()
-                .margin(
-                    bottom = if (isRow) 0.px else 40.px,
-                    right = if (isRow) 40.px else 0.px
-                ),
+            modifier = createLinkModifier(isRow),
             size = IconSize.LG
         )
     }
 }
 
+/**
+ * [Modifier] for the links that adjust margins based on the param [isRow].
+ */
+@Composable
+private fun createLinkModifier(isRow: Boolean): Modifier {
+    return SocialLinkStyle.toModifier()
+        .margin(
+            bottom = if (isRow) 0.px else 40.px,
+            right = if (isRow) 40.px else 0.px
+        )
+}
+
+private const val GITHUB_URL = "https://github.com/NelsonHoang/Nelsonhoang"
 private const val INSTAGRAM_URL = "https://www.instagram.com/nellyh808/"
 private const val LINKEDIN_URL = "https://www.linkedin.com/in/nelsonhoang/"
