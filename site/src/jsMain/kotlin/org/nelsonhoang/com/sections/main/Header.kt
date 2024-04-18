@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.components
+package org.nelsonhoang.com.sections.main
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -16,7 +16,6 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
-import org.nelsonhoang.com.main.NavigationItemStyle
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
 /**

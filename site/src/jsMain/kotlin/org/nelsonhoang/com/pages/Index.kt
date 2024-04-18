@@ -8,9 +8,9 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
-import org.nelsonhoang.com.about.AboutSection
-import org.nelsonhoang.com.experience.ExperienceSection
-import org.nelsonhoang.com.sections.MainSection
+import org.nelsonhoang.com.sections.about.AboutSection
+import org.nelsonhoang.com.sections.experience.ExperienceSection
+import org.nelsonhoang.com.sections.main.MainSection
 
 @Page
 @Composable

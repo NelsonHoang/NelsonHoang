@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.main
+package org.nelsonhoang.com.sections.main
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontWeight

@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.about
+package org.nelsonhoang.com.sections.about
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.FontStyle
@@ -22,7 +22,6 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import org.nelsonhoang.com.components.SectionTitle
-import org.nelsonhoang.com.components.SkillBar
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY

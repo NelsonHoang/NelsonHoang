@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.sections
+package org.nelsonhoang.com.sections.main
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.ObjectFit
@@ -17,11 +17,7 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.nelsonhoang.com.components.Header
-import org.nelsonhoang.com.main.MainText
-import org.nelsonhoang.com.main.SocialBar
 import org.nelsonhoang.com.model.Section
-import org.nelsonhoang.com.main.MainImageStyle
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.Res
 

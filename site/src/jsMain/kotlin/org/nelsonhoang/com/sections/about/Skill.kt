@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.about
+package org.nelsonhoang.com.sections.about
 
 import org.jetbrains.compose.web.css.CSSSizeValue
 import org.jetbrains.compose.web.css.CSSUnit

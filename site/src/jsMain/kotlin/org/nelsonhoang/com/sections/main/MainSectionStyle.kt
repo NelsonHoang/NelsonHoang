@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.main
+package org.nelsonhoang.com.sections.main
 
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier

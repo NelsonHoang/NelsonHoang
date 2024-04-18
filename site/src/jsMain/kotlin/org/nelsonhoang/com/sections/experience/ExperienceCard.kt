@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.experience
+package org.nelsonhoang.com.sections.experience
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.CSSTransition
@@ -49,7 +49,6 @@ fun ExperienceCard(
         )
         ExperienceDetails(
             breakpoint = breakpoint,
-            active = active,
             experience = experience,
             animatedMargin = animatedMargin
         )
@@ -93,7 +92,6 @@ fun ExperienceDescription(
 @Composable
 fun ExperienceDetails(
     breakpoint: Breakpoint,
-    active: Boolean,
     experience: Experience,
     animatedMargin: CSSSizeValue<CSSUnit.px>
 ) {
