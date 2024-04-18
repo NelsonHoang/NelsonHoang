@@ -24,7 +24,7 @@ enum class Experience(
                 "many new products on Facebook Stories and Reels and often had" +
                 "to dive deep into client side and backend video infrastructure " +
                 "code.",
-        company = "Facebook",
+        company = FACEBOOK,
         from = "August 2017",
         to = "November 2023",
     ),
@@ -41,7 +41,7 @@ enum class Experience(
                 "and sold 30,000 units. Ultimately, we failed to sell at a scale " +
                 "needed like FitBit. Nonetheless, I cherish taking a product " +
                 "from 0 to 1.",
-        company = "Skulpt",
+        company = SKULPT,
         from = "September 2014",
         to = "April 2017",
     ),
@@ -54,8 +54,12 @@ enum class Experience(
                 "my first job after college and unicorn companies were being " +
                 "formed seemingly overnight. This is where I was blessed to meet " +
                 "my mentors, who help me navigate life as a software engineer.",
-        company = "Amazon",
+        company = AMAZON,
         from = "August 2014",
         to = "July 2012",
     )
 }
+
+const val AMAZON = "Amazon"
+const val FACEBOOK = "Facebook"
+const val SKULPT = "Skulpt"

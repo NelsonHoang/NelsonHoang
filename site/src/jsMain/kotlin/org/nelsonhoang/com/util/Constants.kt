@@ -9,7 +9,10 @@ object Constants {
 object Res {
     object Img {
         const val ABOUT = "about_image.jpg"
+        const val AMAZON_LOGO = "amazon_logo.jpeg"
         const val BACKGROUND = "background.svg"
+        const val FACEBOOK_LOGO = "facebook_logo_primary.png"
         const val SELF = "self.png"
+        const val SKULPT_LOGO = "skulpt_logo.jpg"
     }
 }
