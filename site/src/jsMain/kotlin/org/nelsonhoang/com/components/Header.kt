@@ -8,9 +8,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.FaBars
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -19,7 +16,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
-import org.nelsonhoang.com.style.NavigationItemStyle
+import org.nelsonhoang.com.main.NavigationItemStyle
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
 /**

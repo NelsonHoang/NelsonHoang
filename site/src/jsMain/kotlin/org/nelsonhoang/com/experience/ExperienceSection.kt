@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.sections
+package org.nelsonhoang.com.experience
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -10,9 +10,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.nelsonhoang.com.components.ExperienceCard
 import org.nelsonhoang.com.components.SectionTitle
-import org.nelsonhoang.com.model.Experience
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.ObserveViewPortEntered

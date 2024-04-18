@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.components
+package org.nelsonhoang.com.main
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -16,7 +16,6 @@ import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.px
-import org.nelsonhoang.com.style.SocialLinkStyle
 
 /**
  * @return A Component that contains social media links

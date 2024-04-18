@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.model
+package org.nelsonhoang.com.experience
 
 /**
  * Model representing each job.

@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.style
+package org.nelsonhoang.com.about
 
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.TransitionProperty

@@ -1,4 +1,4 @@
-package org.nelsonhoang.com.components
+package org.nelsonhoang.com.experience
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.CSSTransition

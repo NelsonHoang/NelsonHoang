@@ -18,10 +18,10 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.components.Header
-import org.nelsonhoang.com.components.MainText
-import org.nelsonhoang.com.components.SocialBar
+import org.nelsonhoang.com.main.MainText
+import org.nelsonhoang.com.main.SocialBar
 import org.nelsonhoang.com.model.Section
-import org.nelsonhoang.com.style.MainImageStyle
+import org.nelsonhoang.com.main.MainImageStyle
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.Res
 
