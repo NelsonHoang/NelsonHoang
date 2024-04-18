@@ -14,7 +14,16 @@ enum class Experience(
     First(
         number = "03",
         jobPosition = "Senior Android Developer",
-        description = "Worked on video editing and infrastructure for Facebook Stories and Reels including building backend APIs when needed",
+        description = "Facebook was my top choice while I was recruiting in 2017" +
+                "for two main reasons. Reason number one was to experience the " +
+                "Facebook culture I heard so much about of \"move fast and " +
+                "break things.\" The second reason was to use the basketball" +
+                "court, where I am happy to say I have met many friends \uD83D\uDE03 " +
+                "I felt like I grew the most as a Software Engineering during my " +
+                "time at the company formerly known as Facebook. I got to build" +
+                "many new products on Facebook Stories and Reels and often had" +
+                "to dive deep into client side and backend video infrastructure " +
+                "code.",
         company = "Facebook",
         from = "August 2017",
         to = "November 2023",
@@ -41,7 +50,7 @@ enum class Experience(
         jobPosition = "Android Developer",
         description = "I was part of Amazon Music in San Francisco, and we were " +
                 "tasked with launching Prime Music on the Kindle Fire and " +
-                "Android devices. It was an exciting time to be in S.F.as it was" +
+                "Android devices. It was an exciting time to be in S.F.as it was " +
                 "my first job after college and unicorn companies were being " +
                 "formed seemingly overnight. This is where I was blessed to meet " +
                 "my mentors, who help me navigate life as a software engineer.",
