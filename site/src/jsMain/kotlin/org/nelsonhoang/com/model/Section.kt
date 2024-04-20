@@ -12,17 +12,17 @@ enum class Section(
         subtitle = "",
         path = "#home"
     ),
-    About(
-        id = "about",
-        title = "About Me",
-        subtitle = "What do I like to do?",
-        path = "#about"
-    ),
     Experience(
         id = "experience",
         title = "Experience",
         subtitle = "Work Experience",
         path = "#experience"
+    ),
+    About(
+        id = "about",
+        title = "About Me",
+        subtitle = "What do I like to do?",
+        path = "#about"
     ),
     Contact(
         id = "contact",
