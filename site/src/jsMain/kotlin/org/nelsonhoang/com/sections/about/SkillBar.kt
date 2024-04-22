@@ -17,7 +17,7 @@ import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
 /**
- * Component for an individual [SkillBar] in the [AboutSection].
+ * @return [Composable] for an individual [SkillBar] in the [AboutSection].
  */
 @Composable
 fun SkillBar(

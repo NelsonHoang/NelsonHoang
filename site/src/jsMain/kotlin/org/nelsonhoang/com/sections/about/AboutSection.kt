@@ -47,6 +47,10 @@ fun AboutSection() {
     }
 }
 
+/**
+ * @return [Composable] with information about hobbies and maybe an image if the
+ * screen is large enough.
+ */
 @Composable
 fun AboutContent() {
     val breakpoint = rememberBreakpoint()
@@ -74,6 +78,9 @@ fun AboutContent() {
     }
 }
 
+/**
+ * @return [Composable] showing an image of self
+ */
 @Composable
 fun AboutImage() {
     Box(
@@ -90,6 +97,9 @@ fun AboutImage() {
     }
 }
 
+/**
+ * @return [Composable] showing an illustration of hobbies
+ */
 @Composable
 fun AboutMe() {
     val scope = rememberCoroutineScope()

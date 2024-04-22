@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.components.SectionTitle
 import org.nelsonhoang.com.model.Section
+import org.nelsonhoang.com.util.Constants.SECTION_PADDING
 import org.nelsonhoang.com.util.Constants.SECTION_WIDTH
 import org.nelsonhoang.com.util.ObserveViewPortEntered
 
@@ -21,7 +22,7 @@ fun ExperienceSection() {
         modifier = Modifier
             .id(Section.Experience.id)
             .maxWidth(SECTION_WIDTH.px)
-            .padding(topBottom = 100.px),
+            .padding(topBottom = SECTION_PADDING.px),
         contentAlignment = Alignment.Center
     ) {
         ExperienceContent()
