@@ -8,6 +8,9 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.FaBars
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -17,6 +20,7 @@ import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
+import org.nelsonhoang.com.util.Res
 
 /**
  * Header Component for the Home Page
@@ -31,11 +35,39 @@ fun Header() {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
+        LeftSide(
+            breakpoint = breakpoint
+        )
         if (breakpoint > Breakpoint.MD) {
             RightSide()
         }
     }
 }
+
+@Composable
+fun LeftSide(
+    breakpoint: Breakpoint
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (breakpoint < Breakpoint.MD) {
+            FaBars(
+                modifier = Modifier
+                    .margin(
+                        right = 15.px,
+                        bottom = 6.px
+                    ),
+                size = IconSize.XL
+            )
+        }
+
+        Image(
+            modifier = LogoStyle.toModifier().width(160.px),
+            src = Res.Img.SELF_LOGO,
+            description = "Logo Image"
+        )
+    }
+}
+
 /**
  * The clickable labels for the header
  */
