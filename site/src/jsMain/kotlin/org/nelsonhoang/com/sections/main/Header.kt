@@ -61,7 +61,7 @@ fun LeftSide(
         }
 
         Image(
-            modifier = LogoStyle.toModifier().width(160.px),
+            modifier = LogoStyle.toModifier().width(80.px),
             src = Res.Img.SELF_LOGO,
             description = "Logo Image"
         )
