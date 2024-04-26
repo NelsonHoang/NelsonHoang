@@ -17,10 +17,10 @@ import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
 
 /**
- * @return [Composable] for an individual [SkillBar] in the [AboutSection].
+ * @return [Composable] for an individual [HobbiesBar] in the [AboutSection].
  */
 @Composable
-fun SkillBar(
+fun HobbiesBar(
     name: String,
     index : Int,
     progressBarHeight: CSSSizeValue<CSSUnit.px> = 5.px,
