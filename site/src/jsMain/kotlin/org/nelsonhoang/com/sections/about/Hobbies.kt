@@ -17,7 +17,7 @@ enum class Hobbies(
         percentage = 100.percent
     ),
     Music(
-        title = "Backend",
+        title = "Music",
         percentage = 90.percent
     ),
     VideoGames(

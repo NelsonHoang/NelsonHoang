@@ -111,7 +111,7 @@ fun AboutMe() {
         distanceFromTop = 300.0,
         onViewportEntered = {
             viewportEntered = true
-            Skill.entries.forEach { skill ->
+            Hobbies.entries.forEach { skill ->
                 scope.launch {
                     animateNumbers(
                         number = skill.percentage.value.toInt(),
@@ -140,10 +140,10 @@ fun AboutMe() {
                 .color(Theme.Secondary.rgb)
                 .toAttrs()
         ) {
-            Text("Hello")
+            Text(ABOUT_ME_TEXT)
         }
-        Skill.entries.forEach { skill ->
-            SkillBar(
+        Hobbies.entries.forEach { skill ->
+            HobbiesBar(
                 name = skill.title,
                 index = skill.ordinal,
                 percentage = if (viewportEntered) skill.percentage else 0.percent,
@@ -152,3 +152,7 @@ fun AboutMe() {
         }
     }
 }
+const val ABOUT_ME_TEXT = "I love playing basketball and my favorite NBA team " +
+        "are the L.A. Lakers. My all time favorite video game is Counter-Strike" +
+        "while Cyberpunk 2077 would be a recent favorite. Italy and Japan are " +
+        "among my favorite countries that I have visited."
