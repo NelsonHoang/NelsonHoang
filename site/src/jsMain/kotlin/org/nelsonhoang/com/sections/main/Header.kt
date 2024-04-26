@@ -26,7 +26,7 @@ import org.nelsonhoang.com.util.Res
  * Header Component for the Home Page
  */
 @Composable
-fun Header() {
+fun Header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     Row(
         modifier = Modifier
@@ -36,7 +36,8 @@ fun Header() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         LeftSide(
-            breakpoint = breakpoint
+            breakpoint = breakpoint,
+            onMenuClicked = onMenuClicked
         )
         if (breakpoint > Breakpoint.MD) {
             RightSide()
@@ -46,7 +47,8 @@ fun Header() {
 
 @Composable
 fun LeftSide(
-    breakpoint: Breakpoint
+    breakpoint: Breakpoint,
+    onMenuClicked: () -> Unit
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         if (breakpoint < Breakpoint.MD) {
@@ -55,7 +57,10 @@ fun LeftSide(
                     .margin(
                         right = 15.px,
                         bottom = 6.px
-                    ),
+                    )
+                    .onClick {
+                        onMenuClicked()
+                    },
                 size = IconSize.XL
             )
         }

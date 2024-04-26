@@ -11,10 +11,13 @@ import com.varabyte.kobweb.core.Page
 import org.nelsonhoang.com.sections.about.AboutSection
 import org.nelsonhoang.com.sections.experience.ExperienceSection
 import org.nelsonhoang.com.sections.main.MainSection
+import org.nelsonhoang.com.sections.main.OverflowMenu
 
 @Page
 @Composable
 fun HomePage() {
+    var menuOpened by remember { mutableStateOf(false)}
+
     Box(
         modifier = Modifier
             .fillMaxSize(),
@@ -24,9 +27,12 @@ fun HomePage() {
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            MainSection()
+            MainSection(onMenuClicked = { menuOpened = true})
             ExperienceSection()
             AboutSection()
+        }
+        if (menuOpened) {
+            OverflowMenu(onMenuClosed = {menuOpened = false})
         }
     }
 }
