@@ -18,16 +18,16 @@ enum class Section(
         subtitle = "Work Experience",
         path = "#experience"
     ),
+    Blog(
+        id = "blog",
+        title = "Blog",
+        subtitle = "Blog",
+        path = "#blog"
+    ),
     About(
         id = "about",
         title = "About Me",
         subtitle = "What do I like to do?",
         path = "#about"
-    ),
-    Contact(
-        id = "contact",
-        title = "Contact me",
-        subtitle = "Get in Touch",
-        path = "#contact"
     ),
 }
