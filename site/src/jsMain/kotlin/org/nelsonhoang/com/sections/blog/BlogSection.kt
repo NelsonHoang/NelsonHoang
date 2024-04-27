@@ -33,7 +33,7 @@ import org.nelsonhoang.com.util.Constants
 fun BlogSection() {
     Box(
         modifier = Modifier
-            .id(Section.About.id)
+            .id(Section.Blog.id)
             .maxWidth(Constants.SECTION_WIDTH.px)
             .padding(topBottom = Constants.SECTION_PADDING.px),
         contentAlignment = Alignment.Center
@@ -67,6 +67,9 @@ fun BlogContent() {
     }
 }
 
+/**
+ * @return [Composable] representing a single blog card.
+ */
 @Composable
 fun BlogCards() {
     Row(
@@ -81,7 +84,7 @@ fun BlogCards() {
         Blog.entries.forEach { blog ->
             BlogCard(
                 modifier = Modifier.margin(
-                    right = if (blog != Blog.One) 25.px else 0.px
+                    right = if (blog != Blog.Three) 25.px else 0.px
                 ),
                 blog = blog
             )
@@ -89,6 +92,10 @@ fun BlogCards() {
     }
 }
 
+/**
+ * @return [Composable] representing the left and right arrow to navigate
+ * the blog cards
+ */
 @Composable
 fun BlogNavigation() {
     Row(

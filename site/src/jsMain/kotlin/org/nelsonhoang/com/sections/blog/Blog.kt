@@ -11,5 +11,15 @@ enum class Blog(
         image = Res.Img.SELF_LOGO,
         title = "Blog1",
         description = "Blog 1"
+    ),
+    Two(
+        image = Res.Img.SELF_LOGO,
+        title = "Blog2",
+        description = "Blog 2"
+    ),
+    Three(
+        image = Res.Img.SELF_LOGO,
+        title = "Blog3",
+        description = "Blog 3"
     )
 }

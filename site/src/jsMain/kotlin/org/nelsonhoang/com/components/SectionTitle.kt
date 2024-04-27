@@ -150,7 +150,7 @@ private fun createDividerLine() {
 }
 
 /**
- * @return [CSSTransition] that animates the text elements forward.
+ * @return [CSSTransition] that animates the text elements from right to left.
  */
 private fun createSectionTitleTransition(): CSSTransition {
     return CSSTransition(
