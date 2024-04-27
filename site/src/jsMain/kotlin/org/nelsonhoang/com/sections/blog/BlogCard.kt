@@ -37,13 +37,13 @@ import org.nelsonhoang.com.util.Res
 fun BlogCard(
     modifier: Modifier = Modifier,
     blog: Blog,
-    link: String = ""
+    link: String = "http://localhost:8080/blog"
 ) {
     Link(
         modifier = BlogSectionStyle.toModifier()
             .textDecorationLine(TextDecorationLine.None),
         path = link,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+        openExternalLinksStrategy = OpenLinkStrategy.IN_PLACE
     ) {
         Column(
             modifier = modifier
