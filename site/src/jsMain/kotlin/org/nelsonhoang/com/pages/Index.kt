@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
 import org.nelsonhoang.com.sections.about.AboutSection
+import org.nelsonhoang.com.sections.blog.BlogSection
 import org.nelsonhoang.com.sections.experience.ExperienceSection
 import org.nelsonhoang.com.sections.main.MainSection
 import org.nelsonhoang.com.sections.main.OverflowMenu
@@ -29,6 +30,7 @@ fun HomePage() {
         ) {
             MainSection(onMenuClicked = { menuOpened = true})
             ExperienceSection()
+            BlogSection()
             AboutSection()
         }
         if (menuOpened) {
