@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.css.px
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.model.Theme
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
+import org.nelsonhoang.com.util.Constants.NUMBER_OF_HEADER_ITEMS
 import org.nelsonhoang.com.util.Res
 
 /**
@@ -86,7 +87,7 @@ fun RightSide() {
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
     ) {
-        Section.entries.toTypedArray().forEach { section ->
+        Section.entries.take(NUMBER_OF_HEADER_ITEMS).toTypedArray().forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
                     .padding(right = 30.px)

@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.nelsonhoang.com.model.Section
 import org.nelsonhoang.com.util.Constants.FONT_FAMILY
+import org.nelsonhoang.com.util.Constants.NUMBER_OF_HEADER_ITEMS
 import org.nelsonhoang.com.util.Res
 
 @Composable
@@ -89,7 +90,7 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                     description = "Logo Image"
                 )
             }
-            Section.entries.take(6).forEach { section ->
+            Section.entries.take(NUMBER_OF_HEADER_ITEMS).forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)

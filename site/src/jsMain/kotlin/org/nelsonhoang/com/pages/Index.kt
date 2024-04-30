@@ -13,6 +13,7 @@ import org.nelsonhoang.com.sections.blog.BlogSection
 import org.nelsonhoang.com.sections.experience.ExperienceSection
 import org.nelsonhoang.com.sections.main.MainSection
 import org.nelsonhoang.com.sections.main.OverflowMenu
+import org.nelsonhoang.com.util.Constants
 
 @Page
 @Composable
@@ -30,11 +31,17 @@ fun HomePage() {
         ) {
             MainSection(onMenuClicked = { menuOpened = true})
             ExperienceSection()
-            BlogSection()
+            if (shouldShowBlogSection()) {
+                BlogSection()
+            }
             AboutSection()
         }
         if (menuOpened) {
             OverflowMenu(onMenuClosed = {menuOpened = false})
         }
     }
+}
+
+fun shouldShowBlogSection(): Boolean {
+    return Constants.NUMBER_OF_HEADER_ITEMS > 3
 }
