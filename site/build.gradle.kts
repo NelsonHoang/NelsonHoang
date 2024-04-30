@@ -1,6 +1,7 @@
 import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
+import kotlinx.html.script
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -21,6 +22,10 @@ kobweb {
                 link {
                     rel = "stylesheet"
                     href = "https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900"
+                }
+                script {
+                    async = true
+                    src="https://www.googletagmanager.com/gtag/js?id=G-V3DYKZ0R6B"
                 }
             }
         }
