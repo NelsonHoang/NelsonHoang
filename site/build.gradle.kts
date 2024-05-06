@@ -27,6 +27,9 @@ kobweb {
                     async = true
                     src="https://www.googletagmanager.com/gtag/js?id=G-V3DYKZ0R6B"
                 }
+                script {
+                    src="analytics.js"
+                }
             }
         }
 
