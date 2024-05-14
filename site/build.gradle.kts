@@ -16,7 +16,7 @@ version = "1.1"
 kobweb {
     app {
         index {
-            description.set("Software Engineer")
+            description.set("Nelson Hoang Android Software Engineer")
 
             head.add {
                 link {
